@@ -12,6 +12,6 @@ public interface SellerDao {
 	void deleteById(Integer id);
 	Seller findById(Integer id);
 	List<Seller> findAll();
-	List<Seller> findbyDepartment(Integer id);
+	List<Seller> findbyDepartment(Department dep);
 	
 }
