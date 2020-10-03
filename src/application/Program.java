@@ -9,20 +9,28 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-		
+
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		
+
 		System.out.println("=== Test 1: seller findById(3) ===");
-		
+
 		Seller seller = sellerDao.findById(3);
-		
+
 		System.out.println(seller);
-		
-		System.out.println("=== Test 2: seller findByDepartment(2) ===");
-		
+
+		System.out.println("\n=== Test 2: seller findByDepartment(2) ===");
+
 		List<Seller> list = sellerDao.findbyDepartment(2);
-		
+
 		for (Seller s : list) {
+			System.out.println(s);
+		}
+
+		System.out.println("\n=== Test 3: seller findAll() ===");
+
+		List<Seller> list2 = sellerDao.findAll();
+
+		for (Seller s : list2) {
 			System.out.println(s);
 		}
 	}
