@@ -3,9 +3,8 @@ package application;
 import java.util.List;
 import java.util.Scanner;
 
-import db.DB;
+import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
-import model.dao.impl.DepartmentDaoJDBC;
 import model.entities.Department;
 
 public class Program2 {
@@ -14,7 +13,7 @@ public class Program2 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		DepartmentDao departmentDao = new DepartmentDaoJDBC(DB.getConnection());
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
 		System.out.println("=== Test 1: department findById(3) ===");
 		Department dep = departmentDao.findById(3);
