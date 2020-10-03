@@ -56,7 +56,7 @@ public class Program {
 		System.out.println("Update completed!");
 		
 		
-		System.out.println("\n=== Test 6: seller insert ===");
+		System.out.println("\n=== Test 6: seller delete ===");
 		System.out.print("Enter ID to delete: ");
 		Integer idDelete = sc.nextInt();
 		sellerDao.deleteById(idDelete);
